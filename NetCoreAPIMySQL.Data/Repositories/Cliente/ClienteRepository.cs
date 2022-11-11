@@ -20,16 +20,7 @@ namespace NetCoreAPIMySQL.Data.Repositories
         {
             return new MySqlConnection(_connectionString.ConnectionString);
         }
-        
-        private int idCliente;
-        private string primerNombre;
-        private string segundoNombre;
-        private string primerApellido;
-        private string segundoApellido;
-        private int telefono;
-        private string direccion;
-        private string correo;
-
+    
         public async Task<IEnumerable<Cliente>> ConsultarClientes()
         {
             var db = dbConnection();
@@ -64,7 +55,7 @@ namespace NetCoreAPIMySQL.Data.Repositories
         {
             var db = dbConnection();
             var sql = @"
-                        UPDATE Cliente SET idCliente = @IdCliente,correo = @Correo,contrasena = @Contrasena ,tipoCliente = @TipoCliente
+                        UPDATE Cliente SET idCliente = @IdCliente,primerNombre = @PrimerNombre,segundoNombre = @SegundoNombre ,primerApellido = @PrimerApellido,segundoApellido = @SegundoApellido,telefono = @Telefono,direccion = @Direccion,correo=@Correo
                         WHERE @IdCliente = idCliente";
             var result = await db.ExecuteAsync(sql, new { Cliente.IdCliente, Cliente.PrimerNombre, Cliente.SegundoNombre, Cliente.PrimerApellido, Cliente.SegundoApellido, Cliente.Telefono, Cliente.Direccion, Cliente.Correo });
             return result > 0;
