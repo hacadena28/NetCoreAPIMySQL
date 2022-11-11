@@ -31,6 +31,7 @@ namespace NetCoreAPIMySQL
             var mySQLConnectionConfig = new MySQLConfiguration(Configuration.GetConnectionString("MySQLConnection"));
             services.AddSingleton(mySQLConnectionConfig);
             services.AddScoped<IPersonaRepository, PersonaRepository>();
+            services.AddScoped<IUsuarioRepository, UsuarioRepository>();
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
