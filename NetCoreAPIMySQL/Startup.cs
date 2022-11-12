@@ -34,6 +34,8 @@ namespace NetCoreAPIMySQL
             services.AddScoped<IUsuarioRepository, UsuarioRepository>();
             services.AddScoped<IClienteRepository, ClienteRepository>();
             services.AddScoped<IDocenteRepository, DocenteRepository>();
+            services.AddScoped<IEstudianteRepository, EstudianteRepository>();
+            services.AddScoped<ICasoRepository, CasoRepository>();
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {

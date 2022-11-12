@@ -9,7 +9,7 @@ namespace NetCoreAPIMySQL.Model
         private string nombreCaso;
         private string descripcion;
         private int idDocente;
-        private List<Estudiante> estudiantes;
+        private int idEstudiantes;
         private string fecha;
 
         private string estado;
@@ -18,7 +18,7 @@ namespace NetCoreAPIMySQL.Model
         public string NombreCaso { get => nombreCaso; set => nombreCaso = value; }
         public string Descripcion { get => descripcion; set => descripcion = value; }
         public int IdDocente { get => idDocente; set => idDocente = value; }
-        public List<Estudiante> Estudiantes { get => estudiantes; set => estudiantes = value; }
+        public int IdEstudiantes { get => idEstudiantes; set => idEstudiantes = value; }
         public string Fecha { get => fecha; set => fecha = value; }
         public string Estado { get => estado; set => estado = value; }
     }
