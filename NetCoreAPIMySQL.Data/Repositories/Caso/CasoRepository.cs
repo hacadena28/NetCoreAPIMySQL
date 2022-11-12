@@ -48,16 +48,16 @@ namespace NetCoreAPIMySQL.Data.Repositories
             var sql = @"
                         INSERT INTO Caso (idCaso,nombreCaso,descripcion,docente,estudiante,fecha,estado)
                         VALUE (@IdCaso,@NombreCaso,@Descripcion,@Docente,@Estudiante,@Fecha,@Estado)";
-            var result = await db.ExecuteAsync(sql, new { caso.IdCaso, caso.NombreCaso, caso.Descripcion, caso.IdDocente, caso.IdEstudiantes, caso.Fecha, caso.Estado });
+            var result = await db.ExecuteAsync(sql, new { caso.IdCaso, caso.NombreCaso, caso.Descripcion, caso.Docente, caso.Estudiante, caso.Fecha, caso.Estado });
             return result > 0;
         }
         public async Task<bool> ModificarCaso(Caso caso)
         {
             var db = dbConnection();
             var sql = @"
-                        UPDATE Caso SET idCaso = @IdCaso,nombreCaso = @NombreCaso,descripcion = @Descripcion ,idDocente = @IdDocente,idEstudiantes = @IdEstudiantes,fecha = @Fecha,estado = @Estado
+                        UPDATE Caso SET idCaso = @IdCaso,nombreCaso = @NombreCaso,descripcion = @Descripcion ,docente = @Docente,estudiante = @Estudiante,fecha = @Fecha,estado = @Estado
                         WHERE @IdCaso = idCaso";
-            var result = await db.ExecuteAsync(sql, new {caso.IdCaso, caso.NombreCaso, caso.Descripcion, caso.IdDocente, caso.IdEstudiantes, caso.Fecha, caso.Estado});
+            var result = await db.ExecuteAsync(sql, new {caso.IdCaso, caso.NombreCaso, caso.Descripcion, caso.Docente, caso.Estudiante, caso.Fecha, caso.Estado});
             return result > 0;
         }
         public async Task<bool> EliminarCaso(Caso caso)

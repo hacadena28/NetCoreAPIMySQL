@@ -50,7 +50,7 @@ namespace NetCoreAPIMySQL.Data.Repositories
             var sql = @"
                         INSERT INTO Docente (idDocente,primerNombre,segundoNombre,primerApellido,segundoApellido,telefono,direccion,correo,facultad)
                         VALUE (@IdDocente,@PrimerNombre,@SegundoNombre,@PrimerApellido,@SegundoApellido,@Telefono,@Direccion,@Correo,@Facultad)";
-            var result = await db.ExecuteAsync(sql, new { docente.IdDocente, docente.PrimerNombre, docente.SegundoNombre, docente.PrimerApellido, docente.SegundoApellido, docente.Telefono, docente.Direccion, docente.Correo });
+            var result = await db.ExecuteAsync(sql, new { docente.IdDocente, docente.PrimerNombre, docente.SegundoNombre, docente.PrimerApellido, docente.SegundoApellido, docente.Telefono, docente.Direccion, docente.Correo,docente.Facultad});
             return result > 0;
         }
         public async Task<bool> ModificarDocente(Docente docente)

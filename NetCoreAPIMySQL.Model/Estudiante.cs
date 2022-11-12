@@ -9,7 +9,7 @@ namespace NetCoreAPIMySQL.Model
         private int telefono;
         private string direccion;
         private string correo;
-        private string semestre;
+        private int semestre;
         private string estado;
         public int IdEstudiante { get => idEstudiante; set => idEstudiante = value; }
         public string PrimerNombre { get => primerNombre; set => primerNombre = value; }
@@ -19,7 +19,7 @@ namespace NetCoreAPIMySQL.Model
         public int Telefono { get => telefono; set => telefono = value; }
         public string Direccion { get => direccion; set => direccion = value; }
         public string Correo { get => correo; set => correo = value; }
-        public string Semestre { get => semestre; set => semestre = value; }
+        public int Semestre { get => semestre; set => semestre = value; }
         public string Estado { get => estado; set => estado = value; }
 
        
