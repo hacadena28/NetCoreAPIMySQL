@@ -10,7 +10,7 @@ namespace NetCoreAPIMySQL.Data.Repositories
     public interface ICasoRepository
     {
         Task<IEnumerable<Caso>> ConsultarCasos();
-        Task<Caso> ConsultarCaso(int idCaso);
+        Task<Caso> ConsultarCaso(long idCaso);
         Task<bool> RegistrarCaso(Caso caso);
         Task<bool> ModificarCaso(Caso caso);
         Task<bool> EliminarCaso(Caso caso);

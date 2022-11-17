@@ -24,7 +24,7 @@ namespace NetCoreAPIMySQL.Controllers
 
         }
         [HttpGet("{IdDocente}")]
-        public async Task<IActionResult> ConsultarDocente(int IdDocente)
+        public async Task<IActionResult> ConsultarDocente(long IdDocente)
         {
             return Ok(await _docenteRepository.ConsultarDocente(IdDocente));
 
@@ -57,7 +57,7 @@ namespace NetCoreAPIMySQL.Controllers
             return NoContent();
         }
         [HttpDelete("{IdDocente}")]
-        public async Task<IActionResult> EliminarDocente(int IdDocente)
+        public async Task<IActionResult> EliminarDocente(long IdDocente)
         {
             await _docenteRepository.EliminarDocente(new Docente { IdDocente = IdDocente });
             return NoContent();

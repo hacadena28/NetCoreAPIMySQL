@@ -7,13 +7,16 @@ using System.Threading.Tasks;
 
 namespace NetCoreAPIMySQL.Model
 {
-    public class Cliente : Persona
+    public class Administrador : Persona
     {
-        private long idCliente;
+        private long idAdministrador;
 
-        //IdCliente
-        [Required] 
+        //IdDocente
+        [Required]
         [Range(0, 9999999999, ErrorMessage = "Valor fuera de rango")]
-        public long IdCliente { get => idCliente; set => idCliente = value; }
+        public long IdAdministrador { get => idAdministrador; set => idAdministrador = value; }
+
+        //Facultad
+
     }
 }

@@ -10,7 +10,7 @@ namespace NetCoreAPIMySQL.Data.Repositories
     public interface IClienteRepository
     {
         Task<IEnumerable<Cliente>> ConsultarClientes();
-        Task<Cliente> ConsultarCliente(int idCliente);
+        Task<Cliente> ConsultarCliente(long idCliente);
         Task<bool> RegistrarCliente(Cliente cliente);
         Task<bool> ModificarCliente(Cliente cliente);
         Task<bool> EliminarCliente(Cliente cliente);

@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿/*using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using NetCoreAPIMySQL.Data.Repositories;
 using NetCoreAPIMySQL.Model;
@@ -65,3 +65,4 @@ namespace NetCoreAPIMySQL.Controllers
 
     }
 }
+*/

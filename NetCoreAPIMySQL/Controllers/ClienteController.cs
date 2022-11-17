@@ -24,7 +24,7 @@ namespace NetCoreAPIMySQL.Controllers
 
         }
         [HttpGet("{IdCliente}")]
-        public async Task<IActionResult> ConsultarCliente(int IdCliente)
+        public async Task<IActionResult> ConsultarCliente(long IdCliente)
         {
             return Ok(await _clienteRepository.ConsultarCliente(IdCliente));
 
@@ -57,7 +57,7 @@ namespace NetCoreAPIMySQL.Controllers
             return NoContent();
         }
         [HttpDelete("{IdCliente}")]
-        public async Task<IActionResult> EliminarCliente(int IdCliente)
+        public async Task<IActionResult> EliminarCliente(long IdCliente)
         {
             await _clienteRepository.EliminarCliente(new Cliente { IdCliente = IdCliente });
             return NoContent();

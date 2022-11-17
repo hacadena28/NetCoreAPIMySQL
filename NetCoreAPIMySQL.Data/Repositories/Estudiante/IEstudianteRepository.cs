@@ -10,7 +10,7 @@ namespace NetCoreAPIMySQL.Data.Repositories
     public interface IEstudianteRepository
     {
         Task<IEnumerable<Estudiante>> ConsultarEstudiantes();
-        Task<Estudiante> ConsultarEstudiante(int idEstudiante);
+        Task<Estudiante> ConsultarEstudiante(long idEstudiante);
         Task<bool> RegistrarEstudiante(Estudiante estudiante);
         Task<bool> ModificarEstudiante(Estudiante estudiante);
         Task<bool> EliminarEstudiante(Estudiante estudiante);

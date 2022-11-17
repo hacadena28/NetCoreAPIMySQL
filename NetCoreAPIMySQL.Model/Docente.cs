@@ -1,31 +1,26 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace NetCoreAPIMySQL.Model
 {
-    public class Docente
+    public class Docente : Persona
     {
-        private int idDocente;
-        private string primerNombre;
-        private string segundoNombre;
-        private string primerApellido;
-        private string segundoApellido;
-        private int telefono;
-        private string direccion;
-        private string correo;
+        private long idDocente;
         private string facultad;
 
-        public int IdDocente { get => idDocente; set => idDocente = value; }
-        public string PrimerNombre { get => primerNombre; set => primerNombre = value; }
-        public string SegundoNombre { get => segundoNombre; set => segundoNombre = value; }
-        public string PrimerApellido { get => primerApellido; set => primerApellido = value; }
-        public string SegundoApellido { get => segundoApellido; set => segundoApellido = value; }
-        public int Telefono { get => telefono; set => telefono = value; }
-        public string Direccion { get => direccion; set => direccion = value; }
-        public string Correo { get => correo; set => correo = value; }
+        //IdDocente
+        [Required]
+        [Range(0, 9999999999, ErrorMessage = "Valor fuera de rango")]
+        public long IdDocente { get => idDocente; set => idDocente = value; }
+
+        //Facultad
+        [Required]
+        [StringLength(maximumLength: 30, MinimumLength = 2, ErrorMessage = "Faultad no valido o fuera de rango")]
         public string Facultad { get => facultad; set => facultad = value; }
+
     }
 }

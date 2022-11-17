@@ -32,7 +32,7 @@ namespace NetCoreAPIMySQL.Data.Repositories
         }
 
 
-        public async Task<Cliente> ConsultarCliente(int idCliente)
+        public async Task<Cliente> ConsultarCliente(long idCliente)
         {
             var db = dbConnection();
             var sql = @"
@@ -44,6 +44,7 @@ namespace NetCoreAPIMySQL.Data.Repositories
 
         public async Task<bool> RegistrarCliente(Cliente Cliente)
         {
+
             var db = dbConnection();
             var sql = @"
                         INSERT INTO Cliente (idCliente,primerNombre,segundoNombre,primerApellido,segundoApellido,telefono,direccion,correo)

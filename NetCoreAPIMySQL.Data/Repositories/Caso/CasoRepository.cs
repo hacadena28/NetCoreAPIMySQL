@@ -32,7 +32,7 @@ namespace NetCoreAPIMySQL.Data.Repositories
         }
 
 
-        public async Task<Caso> ConsultarCaso(int idCaso)
+        public async Task<Caso> ConsultarCaso(long idCaso)
         {
             var db = dbConnection();
             var sql = @"

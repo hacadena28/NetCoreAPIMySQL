@@ -30,10 +30,11 @@ namespace NetCoreAPIMySQL
         {
             var mySQLConnectionConfig = new MySQLConfiguration(Configuration.GetConnectionString("MySQLConnection"));
             services.AddSingleton(mySQLConnectionConfig);
-            services.AddScoped<IPersonaRepository, PersonaRepository>();
+           //services.AddScoped<IPersonaRepository, PersonaRepository>();
             services.AddScoped<IUsuarioRepository, UsuarioRepository>();
             services.AddScoped<IClienteRepository, ClienteRepository>();
             services.AddScoped<IDocenteRepository, DocenteRepository>();
+            services.AddScoped<IAdministradorRepository, AdministradorRepository>();
             services.AddScoped<IEstudianteRepository, EstudianteRepository>();
             services.AddScoped<ICasoRepository, CasoRepository>();
             services.AddControllers();

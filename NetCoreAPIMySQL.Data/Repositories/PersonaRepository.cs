@@ -1,4 +1,4 @@
-﻿using Dapper;
+﻿/*using Dapper;
 using MySql.Data.MySqlClient;
 using NetCoreAPIMySQL.Model;
 using System;
@@ -48,7 +48,7 @@ namespace NetCoreAPIMySQL.Data.Repositories
             var sql = @"
                         INSERT INTO Persona (idPersona,nombres,apellidos,edad,celular,correo)
                         VALUE (@IdPersona,@Nombres,@Apellidos,@Edad,@Celular,@Correo)";
-            var result = await db.ExecuteAsync(sql, new { persona.IdPersona, persona.Nombres, persona.Apellidos, persona.Edad, persona.Celular, persona.Correo });
+           // var result = await db.ExecuteAsync(sql, new { persona.IdPersona, persona.Nombres, persona.Apellidos, persona.Edad, persona.Celular, persona.Correo });
             return result > 0;
         }
 
@@ -58,7 +58,7 @@ namespace NetCoreAPIMySQL.Data.Repositories
             var sql = @"
                         UPDATE Persona SET idPersona = @IdPersona,nombres = @Nombres,apellidos = @Apellidos ,edad = @Edad,celular = @Celular,correo = @Correo
                         WHERE @IdPersona = idPersona";
-            var result = await db.ExecuteAsync(sql, new { persona.IdPersona,persona.Nombres, persona.Apellidos, persona.Edad, persona.Celular, persona.Correo });
+           // var result = await db.ExecuteAsync(sql, new { persona.IdPersona,persona.Nombres, persona.Apellidos, persona.Edad, persona.Celular, persona.Correo });
             return result > 0;
         }
 
@@ -74,3 +74,4 @@ namespace NetCoreAPIMySQL.Data.Repositories
         }
     }
 }
+*/
