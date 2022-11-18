@@ -26,7 +26,7 @@ namespace NetCoreAPIMySQL.Data.Repositories
         {
             var db = dbConnection();
             var sql = @"
-                        SELECT idAdministrador,primerNombre,segundoNombre,primerApellido,segundoApellido,telefono,direccion,correo,facultad
+                        SELECT idAdministrador,primerNombre,segundoNombre,primerApellido,segundoApellido,telefono,direccion,correo
                         FROM Administrador";
             return await db.QueryAsync<Administrador>(sql, new { });
 
@@ -38,7 +38,7 @@ namespace NetCoreAPIMySQL.Data.Repositories
         {
             var db = dbConnection();
             var sql = @"
-                        SELECT idAdministrador,primerNombre,segundoNombre,primerApellido,segundoApellido,telefono,direccion,correo,facultad
+                        SELECT idAdministrador,primerNombre,segundoNombre,primerApellido,segundoApellido,telefono,direccion,correo
                         FROM Administrador 
                         WHERE idAdministrador = @IdAdministrador";
             return await db.QueryFirstOrDefaultAsync<Administrador>(sql, new { IdAdministrador = idAdministrador });
@@ -48,8 +48,8 @@ namespace NetCoreAPIMySQL.Data.Repositories
         {
             var db = dbConnection();
             var sql = @"
-                        INSERT INTO Administrador (idAdministrador,primerNombre,segundoNombre,primerApellido,segundoApellido,telefono,direccion,correo,facultad)
-                        VALUE (@IdAdministrador,@PrimerNombre,@SegundoNombre,@PrimerApellido,@SegundoApellido,@Telefono,@Direccion,@Correo,@Facultad)";
+                        INSERT INTO Administrador (idAdministrador,primerNombre,segundoNombre,primerApellido,segundoApellido,telefono,direccion,correo)
+                        VALUE (@IdAdministrador,@PrimerNombre,@SegundoNombre,@PrimerApellido,@SegundoApellido,@Telefono,@Direccion,@Correo)";
             var result = await db.ExecuteAsync(sql, new { administrador.IdAdministrador, administrador.PrimerNombre, administrador.SegundoNombre, administrador.PrimerApellido, administrador.SegundoApellido, administrador.Telefono, administrador.Direccion, administrador.Correo});
             return result > 0;
         }
