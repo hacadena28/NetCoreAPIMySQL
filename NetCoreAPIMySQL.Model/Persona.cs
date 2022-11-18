@@ -20,12 +20,12 @@ namespace NetCoreAPIMySQL.Model
         private string correo;
 
         //IdPersona
-        [Required]
-        [Range(0, 9999999999, ErrorMessage = "Valor fuera de rango")]
+        [Required(ErrorMessage = "Id Persona es ogligatorio")]
+        [Range(0, 9999999999, ErrorMessage = "Id Persona es un Valor fuera de rango")]
         public long IdPersona { get => idPersona; set => idPersona = value; }
 
         //Primer Nombre
-        [Required]
+        [Required(ErrorMessage = "Primer nombre es ogligatorio")]
         [StringLength(maximumLength:20,MinimumLength =2,ErrorMessage = "Primer nombre no valido o fuera de rango")]
         public string PrimerNombre { get => primerNombre; set => primerNombre = value; }
 
@@ -34,28 +34,28 @@ namespace NetCoreAPIMySQL.Model
         public string SegundoNombre { get => segundoNombre; set => segundoNombre = value; }
 
         //Primer Apellido
-        [Required]
+        [Required(ErrorMessage = "Primer Apellido es ogligatorio")]
         [StringLength(maximumLength:20,MinimumLength =2,ErrorMessage = "Primer apellido no valido o fuera de rango")]
 
         public string PrimerApellido { get => primerApellido; set => primerApellido = value; }
 
         //Segundo Apellido
-        [Required]
+        [Required(ErrorMessage = "Segundo Apellido es ogligatorio")]
         [StringLength(maximumLength:20,MinimumLength =2,ErrorMessage = "Segundo apellido no valido o fuera de rango")]
         public string SegundoApellido { get => segundoApellido; set => segundoApellido = value; }
 
         //Telefono
-        [Required]
-        [Range(1000000, 9999999999, ErrorMessage = "Valor fuera de rango")]
+        [Required(ErrorMessage = "Telefono es ogligatorio")]
+        [Range(1000000, 9999999999, ErrorMessage = "Telefono es un Valor fuera de rango")]
         public long Telefono { get => telefono; set => telefono = value; }
 
         //Direccion
-        [Required]
+        [Required(ErrorMessage = "Direccion es ogligatorio")]
         [StringLength(maximumLength:25,MinimumLength =2,ErrorMessage = "Direccion no valida o fuera de rango")]
         public string Direccion { get => direccion; set => direccion = value; }
 
         //Correo
-        [Required]
+        [Required(ErrorMessage = "Correo es ogligatorio")]
         [StringLength(maximumLength: 40, MinimumLength = 10, ErrorMessage = "Correo no valido o fuera de rango")]
         public string Correo { get => correo; set => correo = value; }
 

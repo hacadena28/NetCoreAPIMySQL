@@ -16,36 +16,36 @@ namespace NetCoreAPIMySQL.Model
         private string estado;
 
         //IDCaso
-        [Required]
-        [Range(0,9999999999, ErrorMessage = "Valor fuera de rango")]
+        [Required(ErrorMessage = "Id Caso es ogligatorio")]
+        [Range(0,9999999999, ErrorMessage = "Id Caso es un Valor fuera de rango")]
         public long IdCaso { get => idCaso; set => idCaso = value; }
 
         //Nombre
-        [Required]
+        [Required(ErrorMessage = "Nombre Caso es ogligatorio")]
         [StringLength(maximumLength: 35, MinimumLength = 2, ErrorMessage = "Nombre de caso no valido o fuera de rango")]
         public string NombreCaso { get => nombreCaso; set => nombreCaso = value; }
 
         //Descripcion
-        [Required]
+        [Required(ErrorMessage = "Descripcion Caso es ogligatorio")]
         [StringLength(maximumLength: 300, MinimumLength = 2, ErrorMessage = "Descripcion no valido o fuera de rango")]
         public string Descripcion { get => descripcion; set => descripcion = value; }
 
         //Docente
-        [Required]
-        [Range(0,9999999999, ErrorMessage = "Valor fuera de rango")]
+        [Required(ErrorMessage = "Docente es ogligatorio")]
+        [Range(0,9999999999, ErrorMessage = "Docente es un Valor fuera de rango")]
         public long Docente { get => docente; set => docente = value; }
 
         //Estudiante
-        [Range(0,9999999999, ErrorMessage = "Valor fuera de rango")]
+        [Range(0,9999999999, ErrorMessage = "Estudiante es un Valor fuera de rango")]
         public long Estudiante { get => estudiante; set => estudiante = value; }
 
         //Fecha
-        [Required]
+        [Required(ErrorMessage = "Fecha es ogligatorio")]
         [StringLength(maximumLength: 10, MinimumLength = 5, ErrorMessage = "Fecha no valido o fuera de rango")]
         public string Fecha { get => fecha; set => fecha = value; }
 
         //Estado
-        [Required]
+        [Required(ErrorMessage = "Estado es ogligatorio")]
         [StringLength(maximumLength: 20, MinimumLength = 2, ErrorMessage = "Estado no valido o fuera de rango")]
         public string Estado { get => estado; set => estado = value; }
     }

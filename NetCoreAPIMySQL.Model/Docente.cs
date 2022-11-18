@@ -13,12 +13,12 @@ namespace NetCoreAPIMySQL.Model
         private string facultad;
 
         //IdDocente
-        [Required]
-        [Range(0, 9999999999, ErrorMessage = "Valor fuera de rango")]
+        [Required(ErrorMessage = "Id Docente es ogligatorio")]
+        [Range(0, 9999999999, ErrorMessage = "Id Docente es un Valor fuera de rango")]
         public long IdDocente { get => idDocente; set => idDocente = value; }
 
         //Facultad
-        [Required]
+        [Required(ErrorMessage = "Facultad es ogligatorio")]
         [StringLength(maximumLength: 30, MinimumLength = 2, ErrorMessage = "Faultad no valido o fuera de rango")]
         public string Facultad { get => facultad; set => facultad = value; }
 

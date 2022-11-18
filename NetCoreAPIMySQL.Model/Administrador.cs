@@ -12,8 +12,8 @@ namespace NetCoreAPIMySQL.Model
         private long idAdministrador;
 
         //IdDocente
-        [Required]
-        [Range(0, 9999999999, ErrorMessage = "Valor fuera de rango")]
+        [Required(ErrorMessage = "Id Administrador es ogligatorio")]
+        [Range(0, 9999999999, ErrorMessage = "Id Administrador es un Valor fuera de rango")]
         public long IdAdministrador { get => idAdministrador; set => idAdministrador = value; }
 
         //Facultad

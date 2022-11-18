@@ -12,8 +12,8 @@ namespace NetCoreAPIMySQL.Model
         private long idCliente;
 
         //IdCliente
-        [Required] 
-        [Range(0, 9999999999, ErrorMessage = "Valor fuera de rango")]
+        [Required(ErrorMessage = "Id Cliente es ogligatorio")] 
+        [Range(0, 9999999999, ErrorMessage = "Id Cliente es un Valor fuera de rango")]
         public long IdCliente { get => idCliente; set => idCliente = value; }
     }
 }
