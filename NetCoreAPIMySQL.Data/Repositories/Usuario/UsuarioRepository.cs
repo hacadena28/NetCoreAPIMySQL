@@ -32,7 +32,18 @@ namespace NetCoreAPIMySQL.Data.Repositories
         }
 
 
-        public async Task<Usuario> ConsultarUsuario(long idUsuario)
+
+        public async Task<Usuario> ConsultarUsuario(string correo)
+        {
+            var db = dbConnection();
+            var sql = @"
+                        SELECT idUsuario,correo,contrasena,tipoUsuario
+                        FROM Usuario 
+                        WHERE correo = @Correo";
+            return await db.QueryFirstOrDefaultAsync<Usuario>(sql, new { Correo = correo });
+        }
+
+        public async Task<Usuario> ConsultarUsuario2(long idUsuario)
         {
             var db = dbConnection();
             var sql = @"
@@ -41,6 +52,8 @@ namespace NetCoreAPIMySQL.Data.Repositories
                         WHERE idUsuario = @IdUsuario";
             return await db.QueryFirstOrDefaultAsync<Usuario>(sql, new { IdUsuario = idUsuario });
         }
+
+
 
         public async Task<bool> RegistrarUsuario(Usuario usuario)
         {

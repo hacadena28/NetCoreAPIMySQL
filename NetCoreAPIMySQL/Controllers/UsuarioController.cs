@@ -23,12 +23,22 @@ namespace NetCoreAPIMySQL.Controllers
             return Ok(await _usuarioRepository.ConsultarUsuarios());
 
         }
-        [HttpGet("{IdUsuario}")]
-        public async Task<IActionResult> ConsultarUsuario(long IdUsuario)
+
+        [HttpGet("{Correo}/correo")]
+        public async Task<IActionResult> ConsultarUsuario(string Correo)
         {
-            return Ok(await _usuarioRepository.ConsultarUsuario(IdUsuario));
+            return Ok(await _usuarioRepository.ConsultarUsuario(Correo));
 
         }
+        [HttpGet("{IdUsuario}/idUsuario")]
+        public async Task<IActionResult> ConsultarUsuario2(long IdUsuario)
+        {
+            return Ok(await _usuarioRepository.ConsultarUsuario2(IdUsuario));
+
+        }
+
+
+
 
 
         [HttpPost]

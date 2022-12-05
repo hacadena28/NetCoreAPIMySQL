@@ -12,6 +12,7 @@ namespace NetCoreAPIMySQL.Model
         private string descripcion;
         private long docente;
         private long estudiante;
+        private long cliente;
         private string fecha;
         private string estado;
 
@@ -31,13 +32,16 @@ namespace NetCoreAPIMySQL.Model
         public string Descripcion { get => descripcion; set => descripcion = value; }
 
         //Docente
-        [Required(ErrorMessage = "Docente es ogligatorio")]
+        
         [Range(0,9999999999, ErrorMessage = "Docente es un Valor fuera de rango")]
         public long Docente { get => docente; set => docente = value; }
 
         //Estudiante
         [Range(0,9999999999, ErrorMessage = "Estudiante es un Valor fuera de rango")]
         public long Estudiante { get => estudiante; set => estudiante = value; }
+        //Cliente
+        [Range(0, 9999999999, ErrorMessage = "Cliente es un Valor fuera de rango")]
+        public long Cliente { get => cliente; set => cliente = value; }
 
         //Fecha
         [Required(ErrorMessage = "Fecha es ogligatorio")]

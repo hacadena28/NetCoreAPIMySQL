@@ -10,7 +10,8 @@ namespace NetCoreAPIMySQL.Data.Repositories
     public interface IUsuarioRepository
     {
         Task<IEnumerable<Usuario>> ConsultarUsuarios();
-        Task<Usuario> ConsultarUsuario(long idUsuario);
+        Task<Usuario> ConsultarUsuario(string correo);
+        Task<Usuario> ConsultarUsuario2(long idUsuario);
         Task<bool> RegistrarUsuario(Usuario usuario);
         Task<bool> ModificarUsuario(Usuario usuario);
         Task<bool> EliminarUsuario(Usuario usuario);
