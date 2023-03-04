@@ -1,0 +1,7 @@
+﻿C:\Users\caden\source\repos\hacadena28\NetCoreAPIMySQL\NetCoreAPIMySQL.Model\Administrador.cs
+C:\Users\caden\source\repos\hacadena28\NetCoreAPIMySQL\NetCoreAPIMySQL.Model\Caso.cs
+C:\Users\caden\source\repos\hacadena28\NetCoreAPIMySQL\NetCoreAPIMySQL.Model\Cliente.cs
+C:\Users\caden\source\repos\hacadena28\NetCoreAPIMySQL\NetCoreAPIMySQL.Model\Docente.cs
+C:\Users\caden\source\repos\hacadena28\NetCoreAPIMySQL\NetCoreAPIMySQL.Model\Estudiante.cs
+C:\Users\caden\source\repos\hacadena28\NetCoreAPIMySQL\NetCoreAPIMySQL.Model\Persona.cs
+C:\Users\caden\source\repos\hacadena28\NetCoreAPIMySQL\NetCoreAPIMySQL.Model\Usuario.cs

@@ -36,21 +36,35 @@ namespace NetCoreAPIMySQL.Data.Repositories
 
         public async Task<Administrador> ConsultarAdministrador(long idAdministrador)
         {
-            var db = dbConnection();
-            var sql = @"
+
+            if (idAdministrador != 0)
+            {
+                if(idAdministrador > 0 && idAdministrador <10000000000 )
+                {
+                    var db = dbConnection();
+                    var sql = @"
                         SELECT idAdministrador,primerNombre,segundoNombre,primerApellido,segundoApellido,telefono,direccion,correo
                         FROM Administrador 
                         WHERE idAdministrador = @IdAdministrador";
-            return await db.QueryFirstOrDefaultAsync<Administrador>(sql, new { IdAdministrador = idAdministrador });
+                    return await db.QueryFirstOrDefaultAsync<Administrador>(sql, new { IdAdministrador = idAdministrador });
+                } else { return null; }
+            }
+            else { return null; }
+           
         }
 
         public async Task<bool> RegistrarAdministrador(Administrador administrador)
         {
+            var result = 0;
+            if (administrador.PrimerApellido =="") {
+
+                return false;
+            };
             var db = dbConnection();
             var sql = @"
                         INSERT INTO Administrador (idAdministrador,primerNombre,segundoNombre,primerApellido,segundoApellido,telefono,direccion,correo)
                         VALUE (@IdAdministrador,@PrimerNombre,@SegundoNombre,@PrimerApellido,@SegundoApellido,@Telefono,@Direccion,@Correo)";
-            var result = await db.ExecuteAsync(sql, new { administrador.IdAdministrador, administrador.PrimerNombre, administrador.SegundoNombre, administrador.PrimerApellido, administrador.SegundoApellido, administrador.Telefono, administrador.Direccion, administrador.Correo});
+            result = await db.ExecuteAsync(sql, new { administrador.IdAdministrador, administrador.PrimerNombre, administrador.SegundoNombre, administrador.PrimerApellido, administrador.SegundoApellido, administrador.Telefono, administrador.Direccion, administrador.Correo});
             return result > 0;
         }
         public async Task<bool> ModificarAdministrador(Administrador administrador)

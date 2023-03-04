@@ -40,7 +40,13 @@ namespace NetCoreAPIMySQL.Controllers
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
+            if (administrador.IdPersona == 0)
+            {
+                administrador = null;
+            }
+
             var created = await _administradorRepository.RegistrarAdministrador(administrador);
+
             return Created("created", created);
         }
 
@@ -63,5 +69,28 @@ namespace NetCoreAPIMySQL.Controllers
             return NoContent();
         }
 
+        bool validarDatos(Administrador user)
+        {
+            if(user.PrimerNombre == "")
+            {
+                if (user.PrimerApellido == "")
+                {
+                    return false;
+                }
+                else
+                {
+                    return true;
+                }
+            }
+            else
+            {
+                return true;
+            }
+
+          
+
+        }
+
     }
+   
 }

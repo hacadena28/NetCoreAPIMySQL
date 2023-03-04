@@ -1,0 +1,15 @@
+﻿C:\Users\caden\source\repos\hacadena28\NetCoreAPIMySQL\NetCoreAPIMySQL\Controllers\AdministradorController.cs
+C:\Users\caden\source\repos\hacadena28\NetCoreAPIMySQL\NetCoreAPIMySQL\Controllers\CasoController.cs
+C:\Users\caden\source\repos\hacadena28\NetCoreAPIMySQL\NetCoreAPIMySQL\Controllers\ClienteController.cs
+C:\Users\caden\source\repos\hacadena28\NetCoreAPIMySQL\NetCoreAPIMySQL\Controllers\DocenteController.cs
+C:\Users\caden\source\repos\hacadena28\NetCoreAPIMySQL\NetCoreAPIMySQL\Controllers\EstudianteController.cs
+C:\Users\caden\source\repos\hacadena28\NetCoreAPIMySQL\NetCoreAPIMySQL\Controllers\PersonaController.cs
+C:\Users\caden\source\repos\hacadena28\NetCoreAPIMySQL\NetCoreAPIMySQL\Controllers\UsuarioController.cs
+C:\Users\caden\source\repos\hacadena28\NetCoreAPIMySQL\NetCoreAPIMySQL\Program.cs
+C:\Users\caden\source\repos\hacadena28\NetCoreAPIMySQL\NetCoreAPIMySQL\Startup.cs
+C:\Users\caden\source\repos\hacadena28\NetCoreAPIMySQL\NetCoreAPIMySQL\obj\Debug\net5.0\.NETCoreApp,Version=v5.0.AssemblyAttributes.cs
+C:\Users\caden\source\repos\hacadena28\NetCoreAPIMySQL\NetCoreAPIMySQL\obj\Debug\net5.0\NetCoreAPIMySQL.AssemblyInfo.cs
+C:\Users\caden\source\repos\hacadena28\NetCoreAPIMySQL\NetCoreAPIMySQL\obj\Debug\net5.0\NetCoreAPIMySQL.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\caden\source\repos\hacadena28\NetCoreAPIMySQL\NetCoreAPIMySQL\appsettings.Development.json
+C:\Users\caden\source\repos\hacadena28\NetCoreAPIMySQL\NetCoreAPIMySQL\appsettings.json
+C:\Users\caden\source\repos\hacadena28\NetCoreAPIMySQL\NetCoreAPIMySQL\Properties\launchSettings.json

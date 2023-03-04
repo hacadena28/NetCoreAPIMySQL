@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SonarProjectConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sonarsource.com/msbuild/analyzer/2021/1">
+  <AnalysisConfigPath>C:\Users\caden\source\repos\hacadena28\NetCoreAPIMySQL\.sonarqube\conf\SonarQubeAnalysisConfig.xml</AnalysisConfigPath>
+  <ProjectPath>C:\Users\caden\source\repos\hacadena28\NetCoreAPIMySQL\NetCoreAPIMySQL.Model\NetCoreAPIMySQL.Model.csproj</ProjectPath>
+  <FilesToAnalyzePath>C:\Users\caden\source\repos\hacadena28\NetCoreAPIMySQL\.sonarqube\conf\0\FilesToAnalyze.txt</FilesToAnalyzePath>
+  <OutPath>C:\Users\caden\source\repos\hacadena28\NetCoreAPIMySQL\.sonarqube\out\0</OutPath>
+  <ProjectType>Product</ProjectType>
+  <TargetFramework>net5.0</TargetFramework>
+</SonarProjectConfig>

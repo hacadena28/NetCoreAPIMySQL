@@ -1,0 +1,15 @@
+﻿C:\Users\caden\source\repos\hacadena28\NetCoreAPIMySQL\NetCoreAPIMySQL.Data\MySQLConfiguration.cs
+C:\Users\caden\source\repos\hacadena28\NetCoreAPIMySQL\NetCoreAPIMySQL.Data\Repositories\Administrador\AdministradorRepository.cs
+C:\Users\caden\source\repos\hacadena28\NetCoreAPIMySQL\NetCoreAPIMySQL.Data\Repositories\Administrador\IAdminstradorRepository.cs
+C:\Users\caden\source\repos\hacadena28\NetCoreAPIMySQL\NetCoreAPIMySQL.Data\Repositories\Caso\CasoRepository.cs
+C:\Users\caden\source\repos\hacadena28\NetCoreAPIMySQL\NetCoreAPIMySQL.Data\Repositories\Caso\ICasoRepository.cs
+C:\Users\caden\source\repos\hacadena28\NetCoreAPIMySQL\NetCoreAPIMySQL.Data\Repositories\Cliente\ClienteRepository.cs
+C:\Users\caden\source\repos\hacadena28\NetCoreAPIMySQL\NetCoreAPIMySQL.Data\Repositories\Cliente\IClienteRepository.cs
+C:\Users\caden\source\repos\hacadena28\NetCoreAPIMySQL\NetCoreAPIMySQL.Data\Repositories\Docente\DocenteRepository.cs
+C:\Users\caden\source\repos\hacadena28\NetCoreAPIMySQL\NetCoreAPIMySQL.Data\Repositories\Docente\IDocenteRepository.cs
+C:\Users\caden\source\repos\hacadena28\NetCoreAPIMySQL\NetCoreAPIMySQL.Data\Repositories\Estudiante\EstudianteRepository.cs
+C:\Users\caden\source\repos\hacadena28\NetCoreAPIMySQL\NetCoreAPIMySQL.Data\Repositories\Estudiante\IEstudianteRepository.cs
+C:\Users\caden\source\repos\hacadena28\NetCoreAPIMySQL\NetCoreAPIMySQL.Data\Repositories\IPersonaRepository.cs
+C:\Users\caden\source\repos\hacadena28\NetCoreAPIMySQL\NetCoreAPIMySQL.Data\Repositories\PersonaRepository.cs
+C:\Users\caden\source\repos\hacadena28\NetCoreAPIMySQL\NetCoreAPIMySQL.Data\Repositories\Usuario\IUsuarioRepository.cs
+C:\Users\caden\source\repos\hacadena28\NetCoreAPIMySQL\NetCoreAPIMySQL.Data\Repositories\Usuario\UsuarioRepository.cs

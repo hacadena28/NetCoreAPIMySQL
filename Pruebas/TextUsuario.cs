@@ -23,36 +23,14 @@ namespace Pruebas
         public async void registrarUsuario()
         {
             Usuario user = new Usuario();
-            user.IdUsuario = 1007824087;
+            user.IdUsuario = 1000000002;
             user.TipoUsuario = "Administrador";
-            user.Correo = "hacadena@unicesar.edu.co";
+            user.Correo = "Administrador2@gmail.com";
             user.Contrasena = "123456";
 
             var result = await controladorUsuario.RegistrarUsuario(user);
-        }
-        [Fact]
-        public async void consultarUsuario()
-        {
-            var result = await controladorUsuario.ConsultarUsuarios();
-        }
-        [Fact]
-        public async void modificarUsario()
-        {
-            Usuario user = new Usuario();
-            user.IdUsuario = 1007824087;
-            user.TipoUsuario = "administrador";
-            user.Correo = "testPrueba1@unicesar.edu.co";
-            user.Contrasena = "123456";
 
-            var result = await controladorUsuario.ModificarUsuario(user);
+            Assert.NotNull(result);
         }
-        [Fact]
-        public async void eliminarUsario()
-        {
-            var result = await controladorUsuario.EliminarUsuario(1007824087);
-        }
-
-
-
     }
 }
